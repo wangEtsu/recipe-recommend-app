@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // routing stuff
-app.get('/status', (req, res) => {
+app.get('/', (req, res) => {
     res.send({
         message:"Hello World"
     })
