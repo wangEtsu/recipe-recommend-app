@@ -46,8 +46,8 @@ html {
     -webkit-filter: blur(0px);
   } */
   
-  #logo img{
-    
+  #logo {
+    width: 50px;
   }
   .content {
     position: absolute;
