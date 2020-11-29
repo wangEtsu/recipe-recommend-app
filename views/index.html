@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Hello -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../public/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster" />
+  <title>Sugar Detective</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="../public/images/Sugar_detective1.png" id="logo" alt="Sugar Detective"></a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Explore
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+        
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+            <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+          </svg></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-danger" href="#">Sign up</button>
+        </li>
+      </ul>
+
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+  <header class="showcase">
+    <div class="content">
+      
+      <div class="title">Why can't you lose weight?</div>
+      <div class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, dolor!</div>
+      <a href="#stories" class="button">Click to know more</a>
+    </div>
+  </header>
+
+  <!-- Stories -->
+  <div class="stories">
+    <div class="row text-center" style="margin: 0;" id="stories">
+      <div class="col-lg-6">
+        <p class="story-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat cum cupiditate
+          debitis ratione quae exercitationem velit, reiciendis officia tenetur a harum alias nihil quidem tempora
+          temporibus dolorum quas, vitae veniam.</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="amcharts" id="bars"></div>
+      </div>
+    </div>
+
+    <div class="row text-center" style="margin: 0;" id="stories">
+      <div class="col-lg-6">
+        <div class="amcharts" id="wordcloud"></div>
+      </div>
+      <div class="col-lg-6">
+        <p class="story-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat cum cupiditate
+          debitis ratione quae exercitationem velit, reiciendis officia tenetur a harum alias nihil quidem tempora
+          temporibus dolorum quas, vitae veniam.</p>
+      </div>
+    </div>
+
+    <div class="row text-center" style="margin: 0;" id="stories">
+      <div class="col-lg-6">
+        <p class="story-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat cum cupiditate
+          debitis ratione quae exercitationem velit, reiciendis officia tenetur a harum alias nihil quidem tempora
+          temporibus dolorum quas, vitae veniam.</p>
+      </div>
+      <div class="col-lg-3">
+        <div class="amcharts" id="pictorial-fat-free"></div>
+      </div>
+      <div class="col-lg-3">
+        <div class="amcharts" id="pictorial-normal"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+    <p>&copy; 2020 universal genius</p>
+  </footer>
+
+
+
+  <!-- Resources -->
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/kelly.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/plugins/wordCloud.js"></script>
+
+  <!-- Chart code -->
+  <script>
+    am4core.ready(function () {
+
+      // Themes begin
+      am4core.useTheme(am4themes_kelly);
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+
+
+      var chart = am4core.create('bars', am4charts.XYChart)
+      chart.colors.step = 2;
+
+      chart.legend = new am4charts.Legend()
+      chart.legend.position = 'top'
+      chart.legend.paddingBottom = 20
+      chart.legend.labels.template.maxWidth = 95
+
+      var xAxis = chart.xAxes.push(new am4charts.CategoryAxis())
+      xAxis.dataFields.category = 'category'
+      xAxis.renderer.cellStartLocation = 0.1
+      xAxis.renderer.cellEndLocation = 0.9
+      xAxis.renderer.grid.template.location = 0;
+
+      var yAxis = chart.yAxes.push(new am4charts.ValueAxis());
+      yAxis.min = 0;
+
+      function createSeries(value, name) {
+        var series = chart.series.push(new am4charts.ColumnSeries())
+        series.dataFields.valueY = value
+        series.dataFields.categoryX = 'category'
+        series.name = name
+
+        series.events.on("hidden", arrangeColumns);
+        series.events.on("shown", arrangeColumns);
+
+        var bullet = series.bullets.push(new am4charts.LabelBullet())
+        bullet.interactionsEnabled = false
+        bullet.dy = 30;
+        bullet.label.text = '{valueY}'
+        bullet.label.fill = am4core.color('#ffffff')
+
+        return series;
+      }
+
+      chart.data = [
+        {
+          category: 'Carbohydrate',
+          first: 325,
+          second: 291,
+        },
+        {
+          category: 'Sugar',
+          first: 36,
+          second: 62.1,
+        },
+        {
+          category: 'Fat',
+          first: 77,
+          second: 92.1,
+        },
+        {
+          category: 'Protein',
+          first: 81,
+          second: 79.8,
+        }
+      ]
+
+
+      createSeries('first', 'Upper bound of recommended intake');
+      createSeries('second', 'Actual');
+
+      function arrangeColumns() {
+
+        var series = chart.series.getIndex(0);
+
+        var w = 1 - xAxis.renderer.cellStartLocation - (1 - xAxis.renderer.cellEndLocation);
+        if (series.dataItems.length > 1) {
+          var x0 = xAxis.getX(series.dataItems.getIndex(0), "categoryX");
+          var x1 = xAxis.getX(series.dataItems.getIndex(1), "categoryX");
+          var delta = ((x1 - x0) / chart.series.length) * w;
+          if (am4core.isNumber(delta)) {
+            var middle = chart.series.length / 2;
+
+            var newIndex = 0;
+            chart.series.each(function (series) {
+              if (!series.isHidden && !series.isHiding) {
+                series.dummyData = newIndex;
+                newIndex++;
+              }
+              else {
+                series.dummyData = chart.series.indexOf(series);
+              }
+            })
+            var visibleCount = newIndex;
+            var newMiddle = visibleCount / 2;
+
+            chart.series.each(function (series) {
+              var trueIndex = chart.series.indexOf(series);
+              var newIndex = series.dummyData;
+
+              var dx = (newIndex - trueIndex + middle - newMiddle) * delta
+
+              series.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+              series.bulletsContainer.animate({ property: "dx", to: dx }, series.interpolationDuration, series.interpolationEasing);
+            })
+          }
+        }
+      }
+    }); // end am4core.ready()
+  </script>
+
+  <script>
+    am4core.ready(function () {
+
+      // Themes begin
+      am4core.useTheme(am4themes_kelly);
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+      var chart = am4core.create("wordcloud", am4plugins_wordCloud.WordCloud);
+      var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
+
+      series.accuracy = 4;
+      series.step = 15;
+      series.rotationThreshold = 0.7;
+      series.maxCount = 200;
+      series.minWordLength = 2;
+      series.labels.template.tooltipText = "{word}: {value}";
+      series.fontFamily = "Courier New";
+      series.maxFontSize = am4core.percent(30);
+
+      series.text = "corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup high fructose corn syrup sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar sugar dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose dextrose maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin maltodextrin molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses molasses honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey honey fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose fructose brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar brown sugar malt extract malt extract malt extract malt extract malt extract malt extract malt extract malt extract malt extract malt extract malt extract malt extract lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose lactose dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin dextrin maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup maple syrup barley malt syrup barley malt syrup barley malt syrup barley malt syrup barley malt syrup sucrose sucrose sucrose sucrose sucrose sucrose sucrose sucrose sucrose maple sugar maple sugar maple sugar maple sugar maple sugar maple sugar glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose glucose high maltose corn syrup high maltose corn syrup fruit juice fruit juice inositol inositol inositol inositol rice syrup rice syrup rice syrup rice syrup rice syrup rice syrup caramel caramel caramel caramel caramel caramel corn sugar corn sugar powdered sugar powdered sugar powdered sugar powdered sugar powdered sugar powdered sugar trehalose syrup demerara sugar raw sugar raw sugar beet sugar agave nectar coconut sugar coconut sugar ";
+
+    }); // end am4core.ready()
+  </script>
+
+  <!-- fat free dressing: fat:0 , sugar:16.3 -->
+  <script>
+    am4core.ready(function () {
+
+      // Themes begin
+      am4core.useTheme(am4themes_kelly);
+      // Themes end
+
+      var iconPath = "M256.814,72.75c0-26.898-10.451-52.213-29.43-71.277C226.444,0.529,225.17,0,223.84,0H87.712c-1.329,0-2.604,0.529-3.543,1.473c-18.978,19.064-29.43,44.379-29.43,71.277c0,50.615,37.414,92.654,86.037,99.922v108.88h-21.25c-8.271,0-15,6.729-15,15c0,8.271,6.729,15,15,15h72.5c8.271,0,15-6.729,15-15c0-8.271-6.729-15-15-15h-21.25v-108.88C219.399,165.404,256.814,123.365,256.814,72.75z M106.709,120.879c-1.234,1.083-2.765,1.615-4.285,1.615c-1.807,0-3.604-0.748-4.888-2.212c-13.153-14.986-18.888-34.832-15.733-54.451c0.571-3.543,3.902-5.956,7.45-5.385c3.544,0.57,5.955,3.905,5.386,7.45c-2.538,15.779,2.079,31.747,12.667,43.811C109.674,114.404,109.406,118.511,106.709,120.879z M144.351,136.662c-0.514,3.194-3.274,5.468-6.409,5.468c-0.343,0-0.69-0.027-1.041-0.083c-6.937-1.117-13.6-3.299-19.804-6.488c-3.193-1.641-4.451-5.559-2.811-8.752c1.641-3.194,5.563-4.451,8.752-2.81c4.985,2.562,10.345,4.317,15.929,5.215C142.511,129.782,144.922,133.118,144.351,136.662z";
+
+      var chart = am4core.create("pictorial-fat-free", am4charts.SlicedChart);
+      chart.paddingTop = am4core.percent(10);
+
+      chart.data = [{
+        "name": "fat",
+        "value": 17.57,
+        "color": am4core.color("#390511")
+      }, {
+        "name": "sugar",
+        "value": 12.2,
+        "color": am4core.color("#7b131c")
+      }];
+
+      var series = chart.series.push(new am4charts.PictorialStackedSeries());
+      series.dataFields.value = "value";
+      series.dataFields.category = "name";
+      series.startLocation = 0.3
+      series.endLocation = 0.85
+
+      series.slicesContainer.background.fill = am4core.color("#676767")
+      series.slicesContainer.background.fillOpacity = 0.2;
+
+      series.maskSprite.path = iconPath;
+
+      series.labelsContainer.width = am4core.percent(100);
+      series.alignLabels = true;
+      series.slices.template.propertyFields.fill = "color";
+      series.slices.template.propertyFields.stroke = "color";
+
+      var gradientModifier = new am4core.LinearGradientModifier();
+      gradientModifier.lightnesses = [0.2, -0.7];
+      series.slices.template.fillModifier = gradientModifier;
+      series.slices.template.strokeModifier = gradientModifier;
+
+      // this makes the fills to start and end at certain location instead of taking whole picture
+      series.endLocation = 0.553;
+      series.startLocation = 0.1;
+      // this makes initial fill animation
+      series.hiddenState.properties.startLocation = 0.553;
+      series.ticks.template.locationX = 0.7;
+      series.labelsContainer.width = 120;
+
+      var sliderContainer = chart.createChild(am4core.Container);
+      sliderContainer.marginTop = am4core.percent(5);
+      sliderContainer.width = am4core.percent(80);
+      sliderContainer.align = "center";
+      sliderContainer.paddingRight = 120;
+
+
+      var label = sliderContainer.createChild(am4core.Label);
+      label.text = "move me!";
+      label.dy = -40;
+      label.isMeasured = false;
+
+      // var slider = sliderContainer.createChild(am4core.Slider);
+      // slider.start = 0;
+      // slider.background.fill = am4core.color("#676767");
+      // slider.background.fillOpacity = 0.2;
+
+      // // doing it later for animation to finish
+      // setTimeout(initSlider, 1500);
+
+      // function initSlider(){
+      //     slider.events.on("rangechanged", function(){
+      //         series.startLocation = 0.1 + (0.553 - 0.1) * slider.start;
+      //         series.dataItems.getIndex(0).value = (1 - slider.start) * 200;
+      //         slider.background.fill = new am4core.Color(am4core.colors.interpolate(am4core.color("#676767").rgb, am4core.color("#7b131c").rgb, slider.start));
+      //         slider.background.fillOpacity = 0.2 + slider.start * 0.8;
+
+      //         blurFilter.blur = slider.start * 5;
+      //     })
+      // }
+
+      var title = chart.createChild(am4core.Label);
+      // title.text = "Selected Ingredient of normal salad dressing"
+      title.fontSize = 20;
+      title.fill = am4core.color("#390511");
+      title.isMeasured = false;
+      title.x = am4core.percent(100);
+      title.horizontalCenter = "right";
+      title.fontWeight = "600";
+
+      let blurFilter = new am4core.BlurFilter();
+      blurFilter.blur = 0;
+      title.filters.push(blurFilter);
+
+    }); // end am4core.ready()
+  </script>
+
+  <script>
+    am4core.ready(function () {
+
+      // Themes begin
+      am4core.useTheme(am4themes_kelly);
+      // Themes end
+
+      var iconPath = "M256.814,72.75c0-26.898-10.451-52.213-29.43-71.277C226.444,0.529,225.17,0,223.84,0H87.712c-1.329,0-2.604,0.529-3.543,1.473c-18.978,19.064-29.43,44.379-29.43,71.277c0,50.615,37.414,92.654,86.037,99.922v108.88h-21.25c-8.271,0-15,6.729-15,15c0,8.271,6.729,15,15,15h72.5c8.271,0,15-6.729,15-15c0-8.271-6.729-15-15-15h-21.25v-108.88C219.399,165.404,256.814,123.365,256.814,72.75z M106.709,120.879c-1.234,1.083-2.765,1.615-4.285,1.615c-1.807,0-3.604-0.748-4.888-2.212c-13.153-14.986-18.888-34.832-15.733-54.451c0.571-3.543,3.902-5.956,7.45-5.385c3.544,0.57,5.955,3.905,5.386,7.45c-2.538,15.779,2.079,31.747,12.667,43.811C109.674,114.404,109.406,118.511,106.709,120.879z M144.351,136.662c-0.514,3.194-3.274,5.468-6.409,5.468c-0.343,0-0.69-0.027-1.041-0.083c-6.937-1.117-13.6-3.299-19.804-6.488c-3.193-1.641-4.451-5.559-2.811-8.752c1.641-3.194,5.563-4.451,8.752-2.81c4.985,2.562,10.345,4.317,15.929,5.215C142.511,129.782,144.922,133.118,144.351,136.662z";
+
+      var chart = am4core.create("pictorial-normal", am4charts.SlicedChart);
+      chart.paddingTop = am4core.percent(10);
+
+      chart.data = [{
+        "name": "fat",
+        "value": 0,
+        "color": am4core.color("#390511")
+      }, {
+        "name": "sugar",
+        "value": 16.6,
+        "color": am4core.color("#7b131c")
+      }];
+
+      var series = chart.series.push(new am4charts.PictorialStackedSeries());
+      series.dataFields.value = "value";
+      series.dataFields.category = "name";
+      series.startLocation = 0.3
+      series.endLocation = 0.85
+
+      series.slicesContainer.background.fill = am4core.color("#676767")
+      series.slicesContainer.background.fillOpacity = 0.2;
+
+      series.maskSprite.path = iconPath;
+
+      series.labelsContainer.width = am4core.percent(100);
+      series.alignLabels = true;
+      series.slices.template.propertyFields.fill = "color";
+      series.slices.template.propertyFields.stroke = "color";
+
+      var gradientModifier = new am4core.LinearGradientModifier();
+      gradientModifier.lightnesses = [0.2, -0.7];
+      series.slices.template.fillModifier = gradientModifier;
+      series.slices.template.strokeModifier = gradientModifier;
+
+      // this makes the fills to start and end at certain location instead of taking whole picture
+      series.endLocation = 0.553;
+      series.startLocation = 0.1;
+      // this makes initial fill animation
+      series.hiddenState.properties.startLocation = 0.553;
+      series.ticks.template.locationX = 0.7;
+      series.labelsContainer.width = 120;
+
+      var sliderContainer = chart.createChild(am4core.Container);
+      sliderContainer.marginTop = am4core.percent(5);
+      sliderContainer.width = am4core.percent(80);
+      sliderContainer.align = "center";
+      sliderContainer.paddingRight = 120;
+
+
+      var label = sliderContainer.createChild(am4core.Label);
+      label.text = "move me!";
+      label.dy = -40;
+      label.isMeasured = false;
+
+      // var slider = sliderContainer.createChild(am4core.Slider);
+      // slider.start = 0;
+      // slider.background.fill = am4core.color("#676767");
+      // slider.background.fillOpacity = 0.2;
+
+      // // doing it later for animation to finish
+      // setTimeout(initSlider, 1500);
+
+      // function initSlider(){
+      //     slider.events.on("rangechanged", function(){
+      //         series.startLocation = 0.1 + (0.553 - 0.1) * slider.start;
+      //         series.dataItems.getIndex(0).value = (1 - slider.start) * 200;
+      //         slider.background.fill = new am4core.Color(am4core.colors.interpolate(am4core.color("#676767").rgb, am4core.color("#7b131c").rgb, slider.start));
+      //         slider.background.fillOpacity = 0.2 + slider.start * 0.8;
+
+      //         blurFilter.blur = slider.start * 5;
+      //     })
+      // }
+
+      var title = chart.createChild(am4core.Label);
+      // title.text = "Selected Ingredient of normal salad dressing"
+      title.fontSize = 20;
+      title.fill = am4core.color("#390511");
+      title.isMeasured = false;
+      title.x = am4core.percent(100);
+      title.horizontalCenter = "right";
+      title.fontWeight = "600";
+
+      let blurFilter = new am4core.BlurFilter();
+      blurFilter.blur = 0;
+      title.filters.push(blurFilter);
+
+    }); // end am4core.ready()
+  </script>
+
+</body>
+
+</html>
