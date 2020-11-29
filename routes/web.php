@@ -13,9 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Laravel 8 change the routing to this format
+Route::get('/', 'App\Http\Controllers\PagesController@index');
+
+Route::get('/about', function () {
+    return view('pages.about');
 });
+
+// Route::get('/user/{id}/{name}', function ($id, $name) {
+//     return 'This is user ' . $name . ' with an id of ' . $id;
+// });
 
 Auth::routes();
 
