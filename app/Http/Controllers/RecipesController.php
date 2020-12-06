@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Recipe;
+
 class RecipesController extends Controller
 {
     /**
@@ -13,7 +15,11 @@ class RecipesController extends Controller
      */
     public function index()
     {
-        //
+        // Get all recipes
+        $recipes = Recipe::all();
+
+        // Load the view
+        return view('recipes.index')->with('recipes', $recipes);
     }
 
     /**
