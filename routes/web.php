@@ -19,5 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // Laravel 8 change the routing to this format
 Route::get('/', 'App\Http\Controllers\PagesController@index');
-
 Route::get('/about', 'App\Http\Controllers\PagesController@about');
+
+// Create routes for RecipesController
+Route::resource('recipes', 'App\Http\Controllers\RecipesController');
