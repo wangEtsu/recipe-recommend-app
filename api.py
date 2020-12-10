@@ -1,5 +1,4 @@
 import os
-import pickle
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS
@@ -13,8 +12,6 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-
-
 # import model
 if os.path.isfile('./cosine_sim.csv'):
     df = pd.read_csv('cosine_sim.csv', index_col = 0)
@@ -25,15 +22,27 @@ else:
 # prediction
 class Predict(Resource):
     def post(self):
-        # recipe past
-        prompt_recipe = 'Catfish Cakes' ### <- this needs to be modified
+        # get most popular recipe 
+        # connect to db
+        db = mysql.connector.connect(host='localhost',user='root',password='root', database='food_recommendation')
+        c = db.cursor()
+        c.execute("""
+        SELECT recipe_name 
+        FROM recipe
+        WHERE Sugar < 10 AND protein IS NOT NULL AND Saturated_fat < 7
+        ORDER BY aggregateLikes DESC
+        LIMIT 100
+        """)
+
+        recipe = [i[0] for i in c]
+        
+        prompt_recipe = random.choice(recipe)
         # top 50 similar recipe
         top_recipe = df[prompt_recipe].sort_values()[:50].index
         # recipe now
         recipe = random.choice(top_recipe)
-        # connect to db
-        db = mysql.connector.connect(host='localhost',user='root',password='root', database='food_recommendation')
         
+        # Query database and dump all info into a JSON
         # get recipe id
         c = db.cursor()
         c.execute("""
@@ -180,8 +189,6 @@ class Predict(Resource):
             data['instructions'].append(temp)
             
             
-
-
         return json.dumps(data)
 
 api.add_resource(Predict, "/predict")
